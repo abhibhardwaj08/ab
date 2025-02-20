@@ -5,6 +5,7 @@ body {
   height: 100vh;
   background: #b784db;
 }
+
 .envelope {
   position: relative;
   cursor: pointer;
@@ -16,6 +17,7 @@ body {
   height: 200px;
   background: #6247aa;
 }
+
 .front {
   position: absolute;
   border-right: 130px solid #815ac0;
@@ -27,6 +29,7 @@ body {
   left: 120px;
   z-index: 3;
 }
+
 .front:before {
   content: "";
   position: absolute;
@@ -38,6 +41,7 @@ body {
   top: -100px;
   left: -120px;
 }
+
 .front:after {
   content: "";
   position: absolute;
@@ -49,6 +53,7 @@ body {
   top: -5px;
   left: -120px;
 }
+
 .top {
   position: absolute;
   border-top: 105px solid #9163cb;
@@ -57,12 +62,15 @@ body {
   height: 0;
   width: 0;
   top: 0;
-  transform-origin: top;
+  transform-origin: top center; /* Fixed */
   transition: 0.4s;
+  z-index: 1; /* Keeps it above the letter */
 }
+
 .envelope:hover .top {
   transform: rotateX(160deg);
 }
+
 .letter {
   position: absolute;
   background: white;
@@ -72,16 +80,20 @@ body {
   left: 10px;
   transition: 0.2s;
 }
+
 .envelope:hover .letter {
   transform: translateY(-100px);
   z-index: 2;
 }
+
 .text1 {
   position: absolute;
   color: white;
   font-family: sans-serif;
-  top: -50%;
+  top: -20px; /* Adjusted */
+  transform: translateY(-50%); /* Ensures proper positioning */
 }
+
 .text {
   text-align: center;
   font-size: 11px;
@@ -94,7 +106,7 @@ body {
   left: 20px;
 }
 
-/*---heart -----*/
+/*---Heart Animation -----*/
 .heart {
   background-color: red;
   height: 70px;
@@ -109,15 +121,16 @@ body {
 
 @keyframes untoldcoding {
   0% {
-    transform: rotate(-45deg) scale(1.05);
+    transform: rotate(-45deg) scale(1.1);
   }
   70% {
     transform: rotate(-45deg) scale(1);
   }
   100% {
-    transform: rotate(-45deg) scale(0.8);
+    transform: rotate(-45deg) scale(0.9);
   }
 }
+
 .heart:before {
   content: "";
   position: absolute;
@@ -127,6 +140,7 @@ body {
   top: -40px;
   border-radius: 50px;
 }
+
 .heart:after {
   content: "";
   position: absolute;
