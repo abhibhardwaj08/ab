@@ -1,5 +1,5 @@
 body {
-  font-style: Arial;
+  font-family: Arial, sans-serif;
   background: black;
 }
 
@@ -32,6 +32,7 @@ body {
   font-size: 3.4rem;
   position: absolute;
   top: 8.5rem;
+  right: 0;
   opacity: 0;
   animation-name: rightFadeInOut;
   animation-delay: 3s;
@@ -79,13 +80,11 @@ body {
 
 @keyframes topFadeOut {
   0% {
-    position: absolute;
     top: -3rem;
     opacity: 0;
   }
 
   75% {
-    position: absolute;
     top: 25%;
     opacity: 1;
   }
@@ -97,13 +96,11 @@ body {
 
 @keyframes bottomFadeOut {
   0% {
-    position: absolute;
     bottom: -5rem;
     opacity: 0;
   }
 
   75% {
-    position: absolute;
     bottom: 25%;
     opacity: 1;
   }
@@ -115,13 +112,11 @@ body {
 
 @keyframes topFadeOutVertical {
   0% {
-    position: absolute;
     top: -3rem;
     opacity: 0;
   }
 
   75% {
-    position: absolute;
     top: 45%;
     opacity: 1;
   }
@@ -133,13 +128,11 @@ body {
 
 @keyframes rightFadeInOut {
   0% {
-    position: absolute;
     right: -3rem;
     opacity: 0;
   }
 
   75% {
-    position: absolute;
     right: 10rem;
     opacity: 1;
   }
@@ -160,6 +153,6 @@ body {
   }
 
   100% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
