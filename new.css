@@ -35,7 +35,7 @@ body {
   right: 0;
   opacity: 0;
   animation-name: rightFadeInOut;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-duration: 6s;
   color: #ccc;
 }
@@ -48,7 +48,7 @@ body {
   top: 45%;
   opacity: 0;
   animation-name: topFadeOutVertical;
-  animation-delay: 7.5s;
+  animation-delay: 6s;
   animation-duration: 6s;
   color: #a3ddf0;
   white-space: nowrap;
@@ -62,7 +62,7 @@ body {
   opacity: 0;
   color: #f0a3be;
   animation-name: fadeInOut;
-  animation-delay: 8.5s;
+  animation-delay: 7.5s;
   animation-duration: 9s;
 }
 
@@ -74,8 +74,19 @@ body {
   opacity: 0;
   color: #f0eba3;
   animation-name: bottomFadeOut;
-  animation-delay: 10s;
+  animation-delay: 9s;
   animation-duration: 9s;
+}
+
+.sixth-text {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff5e5e;
+  opacity: 0;
+  animation: fadeInOut 6s ease-in-out 10s;
 }
 
 @keyframes topFadeOut {
@@ -128,18 +139,16 @@ body {
 
 @keyframes rightFadeInOut {
   0% {
-    right: -3rem;
+    transform: translateX(50px);
     opacity: 0;
   }
-
-  75% {
-    right: 10rem;
+  50% {
+    transform: translateX(0);
     opacity: 1;
   }
-
   100% {
+    transform: translateX(-20px);
     opacity: 0;
-    right: 10rem;
   }
 }
 
@@ -147,11 +156,9 @@ body {
   0% {
     opacity: 0;
   }
-
-  45% {
+  50% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
